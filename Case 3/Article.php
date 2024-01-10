@@ -2,18 +2,16 @@
 require_once("Content.php");
 class Article extends Content
 {
-    public function __construct(string $title, string $text)
+    private bool $isBreakingNews;
+    public function __construct(string $title, string $text, bool $isBreakingNews)
     {
         parent::__construct($title, $text);
+        $this->isBreakingNews = $isBreakingNews;
     }
 
-    public function getTitle()
+    public function showTitle()
     {
-        return $this->title;
-    }
-
-    public function getText()
-    {
-        return $this->text;
+        if ($this->isBreakingNews) return "BREAKING: " . $this->title;
+        else return $this->title;
     }
 }

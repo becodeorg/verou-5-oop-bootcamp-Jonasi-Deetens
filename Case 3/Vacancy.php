@@ -7,13 +7,8 @@ class Vacancy extends Content
         parent::__construct($title, $text);
     }
 
-    public function getTitle()
+    public function showTitle()
     {
-        return $this->title;
-    }
-
-    public function getText()
-    {
-        return $this->text;
+        return $this->title . " - apply now!";
     }
 }
