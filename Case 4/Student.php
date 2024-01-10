@@ -2,12 +2,12 @@
 class Student
 {
     private string $name;
-    private int $age;
+    private int $grade;
 
-    public function __construct(string $name, int $age)
+    public function __construct(string $name, int $grade)
     {
         $this->name = $name;
-        $this->age = $age;
+        $this->grade = $grade;
     }
 
     public function getName()
@@ -15,8 +15,8 @@ class Student
         return $this->name;
     }
 
-    public function getAge()
+    public function getGrade()
     {
-        return $this->age;
+        return $this->grade;
     }
 }
