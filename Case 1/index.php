@@ -55,3 +55,5 @@ $shoppingCart->addItem($wine, 2);
 
 echo "<br>";
 echo "Total price: &euro;" . number_format($shoppingCart->getTotalPrice(), 2);
+echo "<br>";
+echo "Total tax: &euro;" . number_format($shoppingCart->getTotalTax(), 2);

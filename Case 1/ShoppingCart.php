@@ -31,4 +31,18 @@ class ShoppingCart
 
         return $totalPrice;
     }
+
+    public function getTotalTax()
+    {
+        $totalTax = 0;
+
+        foreach($this->basket as $item) {
+            $amount = $item['amount'];
+            $price = $item['item']->getPrice();
+            $tax = $item['item']->getTax();
+            $totalTax += $amount * $price * $tax;
+        };
+
+        return $totalTax;
+    }
 }
